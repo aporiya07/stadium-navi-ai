@@ -16,6 +16,13 @@ from app.services.data_service import data_service
 
 logger = logging.getLogger(__name__)
 
+"""
+Gemini Service
+
+This module handles all interactions with the Google Gemini AI API, providing fallback
+mechanisms and persona-based contextual prompt generation for the Stadium Copilot.
+"""
+
 # Configure Gemini once at import time
 if settings.GEMINI_API_KEY:
     genai.configure(api_key=settings.GEMINI_API_KEY)
@@ -52,6 +59,10 @@ PERSONA_PROMPTS = {
 
 
 class GeminiService:
+    """
+    Service layer for Gemini 2.5 AI inference. 
+    Manages model initialization, fallback parsing, and dynamic context injection.
+    """
     def __init__(self):
         self._model_name = settings.GEMINI_MODEL
         self._model = None  # lazy init after config

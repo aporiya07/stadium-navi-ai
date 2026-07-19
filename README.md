@@ -1,23 +1,35 @@
-# Stadium Copilot — FIFA World Cup 2026
+# Stadium Copilot - FIFA World Cup 2026
 
 **GenAI-powered operations & fan experience for Levi's Stadium (San Francisco Bay Area)**
 
-## Live Demo
-[https://stadium-copilot.vercel.app](https://stadium-copilot.vercel.app)
+## 1. Chosen Vertical
+**Sports Technology & Smart Stadiums**
+This project specifically targets the challenges of managing mega-events (like the FIFA World Cup) by bridging the gap between stadium operations and fan experience.
 
-## Features
-- 🌍 Multilingual Fan Assistant (EN/ES/FR/AR/PT/ZH)
-- 📊 Real-time Crowd Intelligence (WebSocket, 12 zones)
-- 🗺️ Smart Navigation avoiding congestion
-- ♿ Accessibility Concierge (wheelchair, sensory, elderly, low-vision)
-- 🚌 Transport + CO₂ Advisor (transit/rideshare/walk)
-- 👥 Volunteer Ops Copilot (phase-aware action cards)
-- 🚨 Incident Triage
+## 2. Approach and Logic
+Our logic is based on a **Dual Persona Architecture**:
+1. **Fan View**: A mobile-first interface for stadium attendees, providing accessible wayfinding, multilingual AI assistance, and sustainable transport options.
+2. **Ops Dashboard**: A desktop-class interface for stadium management and volunteers, providing real-time crowd heatmaps, incident triage, and automated action cards.
 
-## Architecture
-React + FastAPI + Gemini 2.0 Flash + WebSocket live feed
+The system uses a centralized Intelligence layer (Google Gemini 2.5 Flash-Lite) to analyze crowd data and provide contextual advice to both personas simultaneously.
 
-## Run Locally
+## 3. How the Solution Works
+The architecture utilizes a unidirectional real-time data flow:
+- **Data Generation**: A FastAPI background task (`CrowdSimulator`) continuously generates realistic zonal occupancy data mimicking IoT crowd sensors.
+- **Real-Time Distribution**: The backend pushes these crowd snapshots via a persistent `WebSocket` connection to all connected clients.
+- **Client rendering**: The React/Vite frontend uses `@tanstack/react-query` and Framer Motion to visualize this data in real-time on a stadium SVG map.
+- **AI Inference**: User queries (from fans) and systemic alerts (from ops) are routed to the Gemini API, which has full context of the stadium's layout, current congestion levels, and accessibility nodes, returning actionable responses.
+
+## 4. Assumptions Made
+- **Mocked Sensor Data**: We assume the presence of live overhead cameras/sensors measuring zone capacities. In this solution, this is mocked via a Python simulation loop.
+- **Fixed Stadium Layout**: The current application is hardcoded for the topology of Levi's Stadium.
+- **Gemini Context Window**: We assume the Gemini model has sufficient context to parse the full JSON snapshot of the stadium state in a single prompt for rapid inference.
+
+## 5. Security & Accessibility
+- **Security**: Environment variables are strictly managed, and API keys are restricted to backend proxy layers (the frontend never exposes the Gemini API key).
+- **Accessibility**: The frontend UI complies with WCAG AA contrast ratios, utilizes semantic HTML, and implements comprehensive `aria-label` tags for screen readers. The routing logic explicitly prioritizes ADA-accessible paths for users who need them.
+
+## 6. Run Locally
 ```bash
 # Backend
 cd backend
@@ -32,24 +44,3 @@ cd frontend
 npm install
 npm run dev
 ```
-
-## Judges: Mapping to Challenge Areas
-| Area | Module |
-|------|--------|
-| Navigation | Smart Navigation + Accessibility routing |
-| Crowd Management | Crowd Intelligence + Predictive alerts |
-| Accessibility | Accessibility Concierge (FIFA Sensory Inclusive aligned) |
-| Transportation | Transport/Sustainability Advisor |
-| Sustainability | CO₂-aware recommendations (87.8% fan travel emissions) |
-| Multilingual | 6-language fan chat |
-| Operational Intelligence | Ops Dashboard + Volunteer Copilot |
-| Real-time Decision Support | Live WebSocket + Gemini summaries |
-
-## Demo Script (60 Seconds)
-1. **Landing** — ViewSwitcher toggles Fan ↔ Ops (show motion)
-2. **Fan View** — Chat "¿Dónde está la puerta A?" → Spanish response with zone
-3. **Fan View** — Wayfinding: "Section 101, wheelchair route" → map highlights accessible path avoiding 85% zones
-4. **Fan View** — Transport: "Levi's Stadium to SFO" → 3 options with CO₂ grams
-5. **Ops View** — Live heatmap pulsing, alert toast "Concourse N 87% — deploy staff"
-6. **Ops View** — Volunteer Copilot: HALFTIME phase → 3 action cards with dispatch notes
-7. **Close** — "One Gemini core, two personas, six modules, one flagship stadium. Deployed."
