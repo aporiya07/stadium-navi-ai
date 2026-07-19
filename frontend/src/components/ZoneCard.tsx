@@ -41,7 +41,7 @@ function getTrendIcon(trend: string) {
   }
 }
 
-export function ZoneCard({ zoneId, name, type, count, capacity, pct, trend, onClick }: ZoneCardProps) {
+export function ZoneCard({ name, type, count, capacity, pct, trend, onClick }: ZoneCardProps) {
   const colorClass = getColor(pct)
   
   return (
@@ -52,7 +52,7 @@ export function ZoneCard({ zoneId, name, type, count, capacity, pct, trend, onCl
       whileTap={{ scale: 0.98 }}
       className={`card cursor-pointer transition-all ${colorClass} border`}
       onClick={onClick}
-      style={{ '--progress': `${pct}%` }}
+      style={{ '--progress': `${pct}%` } as any}
     >
       <div className="p-4">
         <div className="flex items-start justify-between mb-3">

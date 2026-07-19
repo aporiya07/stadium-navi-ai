@@ -9,15 +9,7 @@ interface ZoneMapProps {
   onZoneClick?: (zone: ZoneOccupancy) => void
 }
 
-const ZONE_COLORS = {
-  gate: '#3B82F6',
-  concourse: '#10B981',
-  seating: '#F59E0B',
-  club: '#8B5CF6',
-  sensory: '#EC4899',
-  medical: '#EF4444',
-}
-
+// ZONE_COLORS removed because it was unused
 function getOccupancyColor(pct: number) {
   if (pct >= 90) return '#EF4444'
   if (pct >= 80) return '#F59E0B'
@@ -101,7 +93,7 @@ export function ZoneMap({ snapshot, onZoneClick }: ZoneMapProps) {
           </svg>
 
           {/* Zone markers */}
-          {zones.map((zone) => {
+          {zones.map((zone: ZoneOccupancy) => {
             const layout = ZONE_LAYOUT[zone.zone_id]
             if (!layout) return null
 

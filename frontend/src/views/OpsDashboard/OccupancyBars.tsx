@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { CrowdSnapshot } from '../../lib/api'
+import { CrowdSnapshot, ZoneOccupancy } from '../../lib/api'
 
 interface OccupancyBarsProps {
   snapshot: CrowdSnapshot | null
@@ -24,9 +24,9 @@ export function OccupancyBars({ snapshot }: OccupancyBarsProps) {
   const zones = snapshot?.zones || []
   const sorted = [...zones].sort((a, b) => b.pct - a.pct)
 
-  const total    = zones.reduce((s, z) => s + z.count, 0)
-  const capacity = zones.reduce((s, z) => s + z.capacity, 0)
-  const alerts   = zones.filter(z => z.pct >= 80).length
+  const total    = zones.reduce((s: number, z: ZoneOccupancy) => s + z.count, 0)
+  const capacity = zones.reduce((s: number, z: ZoneOccupancy) => s + z.capacity, 0)
+  const alerts   = zones.filter((z: ZoneOccupancy) => z.pct >= 80).length
   const pct      = capacity > 0 ? (total / capacity) * 100 : 0
 
   return (
