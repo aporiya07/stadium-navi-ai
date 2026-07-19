@@ -1,0 +1,262 @@
+{
+  "zones": [
+    {
+      "zone_id": "GATE_A",
+      "name": "Gate A - Great America",
+      "type": "gate",
+      "capacity": 8500,
+      "accessible": true,
+      "coordinates": {"x": 100, "y": 100},
+      "connections": ["CONCOURSE_N", "CONCOURSE_E"],
+      "description": "Main entrance near VTA Light Rail Great America Station. Step-free access, tactile paving, NaviLens codes."
+    },
+    {
+      "zone_id": "GATE_B",
+      "name": "Gate B - North",
+      "type": "gate",
+      "capacity": 7200,
+      "accessible": true,
+      "coordinates": {"x": 300, "y": 100},
+      "connections": ["CONCOURSE_N", "CONCOURSE_W"],
+      "description": "North entrance with accessible drop-off zone. Elevator to club level."
+    },
+    {
+      "zone_id": "GATE_C",
+      "name": "Gate C - East",
+      "type": "gate",
+      "capacity": 6800,
+      "accessible": true,
+      "coordinates": {"x": 500, "y": 300},
+      "connections": ["CONCOURSE_E", "CONCOURSE_S"],
+      "description": "East entrance near parking lots. Wide gates for wheelchair access."
+    },
+    {
+      "zone_id": "GATE_D",
+      "name": "Gate D - South",
+      "type": "gate",
+      "capacity": 7500,
+      "accessible": true,
+      "coordinates": {"x": 300, "y": 500},
+      "connections": ["CONCOURSE_S", "CONCOURSE_W"],
+      "description": "South entrance near Caltrain shuttle. Family restrooms nearby."
+    },
+    {
+      "zone_id": "CONCOURSE_N",
+      "name": "North Concourse",
+      "type": "concourse",
+      "capacity": 12000,
+      "accessible": true,
+      "coordinates": {"x": 200, "y": 180},
+      "connections": ["GATE_A", "GATE_B", "SECTION_101", "SECTION_102", "SENSORY_ROOM_N"],
+      "description": "Wide concourse with concessions, merch, accessible restrooms. Sensory room at north end."
+    },
+    {
+      "zone_id": "CONCOURSE_E",
+      "name": "East Concourse",
+      "type": "concourse",
+      "capacity": 10000,
+      "accessible": true,
+      "coordinates": {"x": 420, "y": 300},
+      "connections": ["GATE_A", "GATE_C", "SECTION_103", "SECTION_104", "CLUB_EAST"],
+      "description": "East side concessions and amenities. Elevator access to club level."
+    },
+    {
+      "zone_id": "CONCOURSE_S",
+      "name": "South Concourse",
+      "type": "concourse",
+      "capacity": 11000,
+      "accessible": true,
+      "coordinates": {"x": 300, "y": 420},
+      "connections": ["GATE_C", "GATE_D", "SECTION_105", "SECTION_106", "SENSORY_ROOM_S"],
+      "description": "South concourse with family zone, quiet area, and accessible seating services."
+    },
+    {
+      "zone_id": "CONCOURSE_W",
+      "name": "West Concourse",
+      "type": "concourse",
+      "capacity": 9500,
+      "accessible": true,
+      "coordinates": {"x": 180, "y": 300},
+      "connections": ["GATE_B", "GATE_D", "SECTION_107", "SECTION_108", "CLUB_WEST"],
+      "description": "West side with premium concessions. Ramp access to all seating sections."
+    },
+    {
+      "zone_id": "SECTION_101",
+      "name": "Section 101 - Lower Bowl North",
+      "type": "seating",
+      "capacity": 4200,
+      "accessible": true,
+      "coordinates": {"x": 200, "y": 220},
+      "connections": ["CONCOURSE_N"],
+      "description": "Lower bowl north, rows 1-30. Wheelchair spaces rows 1, 15. Companion seats adjacent."
+    },
+    {
+      "zone_id": "SECTION_102",
+      "name": "Section 102 - Lower Bowl North-Center",
+      "type": "seating",
+      "capacity": 4000,
+      "accessible": true,
+      "coordinates": {"x": 250, "y": 220},
+      "connections": ["CONCOURSE_N"],
+      "description": "Lower bowl north-center. Accessible via ramp from North Concourse."
+    },
+    {
+      "zone_id": "SECTION_103",
+      "name": "Section 103 - Lower Bowl East",
+      "type": "seating",
+      "capacity": 3800,
+      "accessible": true,
+      "coordinates": {"x": 380, "y": 300},
+      "connections": ["CONCOURSE_E"],
+      "description": "Lower bowl east side. Accessible via ramp from East Concourse."
+    },
+    {
+      "zone_id": "SECTION_104",
+      "name": "Section 104 - Lower Bowl East-Center",
+      "type": "seating",
+      "capacity": 3800,
+      "accessible": true,
+      "coordinates": {"x": 350, "y": 330},
+      "connections": ["CONCOURSE_E"],
+      "description": "Lower bowl east-center. Wheelchair spaces available."
+    },
+    {
+      "zone_id": "SECTION_105",
+      "name": "Section 105 - Lower Bowl South",
+      "type": "seating",
+      "capacity": 4000,
+      "accessible": true,
+      "coordinates": {"x": 300, "y": 380},
+      "connections": ["CONCOURSE_S"],
+      "description": "Lower bowl south. Family-friendly section. Sensory kits at entrance."
+    },
+    {
+      "zone_id": "SECTION_106",
+      "name": "Section 106 - Lower Bowl South-Center",
+      "type": "seating",
+      "capacity": 4000,
+      "accessible": true,
+      "coordinates": {"x": 250, "y": 380},
+      "connections": ["CONCOURSE_S"],
+      "description": "Lower bowl south-center. Accessible seating with companion seats."
+    },
+    {
+      "zone_id": "SECTION_107",
+      "name": "Section 107 - Lower Bowl West",
+      "type": "seating",
+      "capacity": 3800,
+      "accessible": true,
+      "coordinates": {"x": 220, "y": 300},
+      "connections": ["CONCOURSE_W"],
+      "description": "Lower bowl west. Premium seating area. Elevator from West Concourse."
+    },
+    {
+      "zone_id": "SECTION_108",
+      "name": "Section 108 - Lower Bowl West-Center",
+      "type": "seating",
+      "capacity": 3800,
+      "accessible": true,
+      "coordinates": {"x": 200, "y": 330},
+      "connections": ["CONCOURSE_W"],
+      "description": "Lower bowl west-center. Accessible via ramp."
+    },
+    {
+      "zone_id": "SECTION_201",
+      "name": "Section 201 - Upper Bowl North",
+      "type": "seating",
+      "capacity": 5500,
+      "accessible": false,
+      "coordinates": {"x": 200, "y": 200},
+      "connections": ["CONCOURSE_N"],
+      "description": "Upper bowl north. Stairs only. Not wheelchair accessible."
+    },
+    {
+      "zone_id": "SECTION_203",
+      "name": "Section 203 - Upper Bowl East",
+      "type": "seating",
+      "capacity": 5000,
+      "accessible": false,
+      "coordinates": {"x": 400, "y": 280},
+      "connections": ["CONCOURSE_E"],
+      "description": "Upper bowl east. Stairs only."
+    },
+    {
+      "zone_id": "CLUB_EAST",
+      "name": "East Club Level",
+      "type": "club",
+      "capacity": 2500,
+      "accessible": true,
+      "coordinates": {"x": 400, "y": 260},
+      "connections": ["CONCOURSE_E"],
+      "description": "Premium club seating with dedicated entrance, lounge, and accessible facilities."
+    },
+    {
+      "zone_id": "CLUB_WEST",
+      "name": "West Club Level",
+      "type": "club",
+      "capacity": 2500,
+      "accessible": true,
+      "coordinates": {"x": 200, "y": 280},
+      "connections": ["CONCOURSE_W"],
+      "description": "Premium club seating with dedicated entrance, lounge, and accessible facilities."
+    },
+    {
+      "zone_id": "SENSORY_ROOM_N",
+      "name": "North Sensory Room",
+      "type": "sensory",
+      "capacity": 30,
+      "accessible": true,
+      "coordinates": {"x": 150, "y": 150},
+      "connections": ["CONCOURSE_N"],
+      "description": "Quiet sensory room with dimmable lights, weighted blankets, noise-canceling headphones."
+    },
+    {
+      "zone_id": "SENSORY_ROOM_S",
+      "name": "South Sensory Room",
+      "type": "sensory",
+      "capacity": 30,
+      "accessible": true,
+      "coordinates": {"x": 300, "y": 450},
+      "connections": ["CONCOURSE_S"],
+      "description": "Quiet sensory room with calming activities, fidget tools, and trained staff."
+    },
+    {
+      "zone_id": "MEDICAL_MAIN",
+      "name": "Main Medical Center",
+      "type": "medical",
+      "capacity": 50,
+      "accessible": true,
+      "coordinates": {"x": 300, "y": 250},
+      "connections": ["CONCOURSE_N", "CONCOURSE_S"],
+      "description": "Primary medical facility with first aid, AED, and ambulance access."
+    }
+  ],
+  "edges": [
+    {"from_zone": "GATE_A", "to_zone": "CONCOURSE_N", "distance_m": 50, "accessible": true},
+    {"from_zone": "GATE_A", "to_zone": "CONCOURSE_E", "distance_m": 80, "accessible": true},
+    {"from_zone": "GATE_B", "to_zone": "CONCOURSE_N", "distance_m": 40, "accessible": true},
+    {"from_zone": "GATE_B", "to_zone": "CONCOURSE_W", "distance_m": 60, "accessible": true},
+    {"from_zone": "GATE_C", "to_zone": "CONCOURSE_E", "distance_m": 45, "accessible": true},
+    {"from_zone": "GATE_C", "to_zone": "CONCOURSE_S", "distance_m": 70, "accessible": true},
+    {"from_zone": "GATE_D", "to_zone": "CONCOURSE_S", "distance_m": 50, "accessible": true},
+    {"from_zone": "GATE_D", "to_zone": "CONCOURSE_W", "distance_m": 65, "accessible": true},
+    {"from_zone": "CONCOURSE_N", "to_zone": "SECTION_101", "distance_m": 30, "accessible": true},
+    {"from_zone": "CONCOURSE_N", "to_zone": "SECTION_102", "distance_m": 35, "accessible": true},
+    {"from_zone": "CONCOURSE_N", "to_zone": "SENSORY_ROOM_N", "distance_m": 25, "accessible": true},
+    {"from_zone": "CONCOURSE_E", "to_zone": "SECTION_103", "distance_m": 30, "accessible": true},
+    {"from_zone": "CONCOURSE_E", "to_zone": "SECTION_104", "distance_m": 35, "accessible": true},
+    {"from_zone": "CONCOURSE_E", "to_zone": "CLUB_EAST", "distance_m": 40, "accessible": true},
+    {"from_zone": "CONCOURSE_S", "to_zone": "SECTION_105", "distance_m": 30, "accessible": true},
+    {"from_zone": "CONCOURSE_S", "to_zone": "SECTION_106", "distance_m": 35, "accessible": true},
+    {"from_zone": "CONCOURSE_S", "to_zone": "SENSORY_ROOM_S", "distance_m": 25, "accessible": true},
+    {"from_zone": "CONCOURSE_W", "to_zone": "SECTION_107", "distance_m": 30, "accessible": true},
+    {"from_zone": "CONCOURSE_W", "to_zone": "SECTION_108", "distance_m": 35, "accessible": true},
+    {"from_zone": "CONCOURSE_W", "to_zone": "CLUB_WEST", "distance_m": 40, "accessible": true},
+    {"from_zone": "CONCOURSE_N", "to_zone": "CONCOURSE_E", "distance_m": 100, "accessible": true},
+    {"from_zone": "CONCOURSE_E", "to_zone": "CONCOURSE_S", "distance_m": 100, "accessible": true},
+    {"from_zone": "CONCOURSE_S", "to_zone": "CONCOURSE_W", "distance_m": 100, "accessible": true},
+    {"from_zone": "CONCOURSE_W", "to_zone": "CONCOURSE_N", "distance_m": 100, "accessible": true},
+    {"from_zone": "CONCOURSE_N", "to_zone": "MEDICAL_MAIN", "distance_m": 50, "accessible": true},
+    {"from_zone": "CONCOURSE_S", "to_zone": "MEDICAL_MAIN", "distance_m": 50, "accessible": true}
+  ]
+}

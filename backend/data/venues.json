@@ -1,0 +1,36 @@
+{
+  "venues": [
+    {
+      "id": "levis_stadium",
+      "name": "Levi's Stadium",
+      "city": "Santa Clara",
+      "country": "USA",
+      "timezone": "America/Los_Angeles",
+      "capacity": 68500,
+      "fifa_2026_host": true,
+      "accessibility_certified": true,
+      "transit_connections": ["VTA Light Rail", "Caltrain", "VTA Bus", "SamTrans"],
+      "parking_spaces": 12000,
+      "bike_parking": 500,
+      "ev_charging": 100,
+      "sensory_rooms": 2,
+      "wheelchair_spaces": 850,
+      "assistive_listening": true,
+      "navilens_enabled": true,
+      "languages_supported": ["en", "es", "fr", "ar", "pt", "zh"],
+      "carbon_neutral_goal": 2026,
+      "facts": [
+        {"key": "opening_year", "value": "2014", "category": "general"},
+        {"key": "field_surface", "value": "Natural grass", "category": "general"},
+        {"key": "leed_certification", "value": "LEED Gold", "category": "sustainability"},
+        {"key": "solar_capacity_kw", "value": "400", "category": "sustainability"},
+        {"key": "wifi_access_points", "value": "1300+", "category": "technology"},
+        {"key": "mobile_app", "value": "Levi's Stadium Official App", "category": "technology"},
+        {"key": "accessible_entrances", "value": "All 8 gates", "category": "accessibility"},
+        {"key": "family_restrooms", "value": "24 locations", "category": "accessibility"},
+        {"key": "gate_a_transit", "value": "VTA Light Rail Great America Station", "category": "transit"},
+        {"key": "gate_f_transit", "value": "Caltrain Lawrence Station (shuttle)", "category": "transit"}
+      ]
+    }
+  ]
+}

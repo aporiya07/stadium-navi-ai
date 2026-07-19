@@ -1,0 +1,107 @@
+{
+  "match_schedule": [
+    {
+      "match_id": "fifa2026_sf_01",
+      "venue_id": "levis_stadium",
+      "date": "2026-06-15",
+      "kickoff_local": "14:00",
+      "timezone": "America/Los_Angeles",
+      "phase_timeline": {
+        "PRE_MATCH": {"start": "11:00", "duration_min": 180, "description": "Gates open, fan ingress"},
+        "LIVE": {"start": "14:00", "duration_min": 105, "description": "Match in progress (incl. stoppage)"},
+        "HALFTIME": {"start": "15:45", "duration_min": 15, "description": "Half-time break, concession surge"},
+        "POST_MATCH": {"start": "16:00", "duration_min": 90, "description": "Full time, fan egress"}
+      },
+      "teams": {
+        "home": "TBD",
+        "away": "TBD",
+        "group": "Group Stage"
+      },
+      "expected_attendance": 68500,
+      "gates_open_minutes_before_kickoff": 180
+    },
+    {
+      "match_id": "fifa2026_sf_02",
+      "venue_id": "levis_stadium",
+      "date": "2026-06-19",
+      "kickoff_local": "17:00",
+      "timezone": "America/Los_Angeles",
+      "phase_timeline": {
+        "PRE_MATCH": {"start": "14:00", "duration_min": 180, "description": "Gates open, fan ingress"},
+        "LIVE": {"start": "17:00", "duration_min": 105, "description": "Match in progress (incl. stoppage)"},
+        "HALFTIME": {"start": "18:45", "duration_min": 15, "description": "Half-time break, concession surge"},
+        "POST_MATCH": {"start": "19:00", "duration_min": 90, "description": "Full time, fan egress"}
+      },
+      "teams": {
+        "home": "TBD",
+        "away": "TBD",
+        "group": "Group Stage"
+      },
+      "expected_attendance": 68500,
+      "gates_open_minutes_before_kickoff": 180
+    },
+    {
+      "match_id": "fifa2026_sf_03",
+      "venue_id": "levis_stadium",
+      "date": "2026-06-24",
+      "kickoff_local": "14:00",
+      "timezone": "America/Los_Angeles",
+      "phase_timeline": {
+        "PRE_MATCH": {"start": "11:00", "duration_min": 180, "description": "Gates open, fan ingress"},
+        "LIVE": {"start": "14:00", "duration_min": 105, "description": "Match in progress (incl. stoppage)"},
+        "HALFTIME": {"start": "15:45", "duration_min": 15, "description": "Half-time break, concession surge"},
+        "POST_MATCH": {"start": "16:00", "duration_min": 90, "description": "Full time, fan egress"}
+      },
+      "teams": {
+        "home": "TBD",
+        "away": "TBD",
+        "group": "Round of 16"
+      },
+      "expected_attendance": 68500,
+      "gates_open_minutes_before_kickoff": 180
+    }
+  ],
+  "transport_schedules": {
+    "vta_light_rail": {
+      "line": "Green Line",
+      "stations": ["Great America", "Old Ironsides", "Reamwood", "Tasman", "Baypointe", "Champion", "Cisco Way", "Ames", "Vienna", "Civic Center", "San Jose Diridon"],
+      "frequency_min": 15,
+      "match_day_frequency_min": 8,
+      "first_train": "05:00",
+      "last_train": "00:30",
+      "station_at_stadium": "Great America",
+      "gate_proximity": "Gate A"
+    },
+    "caltrain": {
+      "stations": ["San Francisco", "Millbrae", "San Mateo", "Redwood City", "Palo Alto", "Mountain View", "Sunnyvale", "Lawrence", "Santa Clara", "San Jose Diridon"],
+      "frequency_min": 30,
+      "match_day_frequency_min": 20,
+      "shuttle_from_lawrence": true,
+      "shuttle_gate": "Gate F",
+      "shuttle_frequency_min": 10
+    },
+    "vta_bus": {
+      "routes": ["57", "60", "321"],
+      "frequency_min": 15,
+      "match_day_frequency_min": 10
+    },
+    "rideshare": {
+      "zones": ["Gate A Pickup", "Gate C Pickup", "Gate F Pickup"],
+      "ev_percentage": 0.35,
+      "surge_multiplier_match": 1.8
+    }
+  },
+  "sustainability": {
+    "co2_factors_g_per_passenger_km": {
+      "walk": 0,
+      "rail": 15,
+      "bus": 30,
+      "rideshare_ev": 50,
+      "rideshare_ice": 180,
+      "private_car": 180
+    },
+    "stadium_to_sfo_km": 15,
+    "stadium_to_downtown_sj_km": 8,
+    "stadium_to_san_francisco_km": 65
+  }
+}
