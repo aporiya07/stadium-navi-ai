@@ -40,8 +40,9 @@ export function useLiveFeed(options: UseLiveFeedOptions = {}) {
     if (wsRef.current?.readyState === WebSocket.OPEN) return
 
     // Use the Vite proxy: /api path proxied to backend
-    const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:'
-    const wsUrl = `${protocol}//${window.location.host}/api/v1/ws/live`
+    const backendUrl = import.meta.env.VITE_API_URL || ''
+    const wsHost = backendUrl ? backendUrl.replace(/^http/, 'ws') : `${window.location.protocol === 'https:' ? 'wss:' : 'ws:'}//${window.location.host}`
+    const wsUrl = `${wsHost}/api/v1/ws/live`
 
     try {
       const ws = new WebSocket(wsUrl)
