@@ -1,3 +1,10 @@
+"""
+Main Application Entry Point
+
+This module initializes the FastAPI application, sets up CORS middleware,
+configures the application lifecycle (e.g. starting the crowd simulator),
+and mounts the main API routers for the Stadium Copilot backend.
+"""
 from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
@@ -50,6 +57,9 @@ app.include_router(api_router, prefix="/api/v1")
 
 @app.get("/")
 async def root():
+    """
+    Root endpoint serving basic venue metadata and service discovery links.
+    """
     return {
         "name": settings.APP_NAME,
         "version": "1.0.0",
@@ -62,6 +72,9 @@ async def root():
 
 @app.get("/health")
 async def health():
+    """
+    Health check endpoint returning system status and connected services.
+    """
     return {
         "status": "healthy",
         "services": {

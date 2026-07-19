@@ -14,9 +14,17 @@ cd backend
 pytest tests/ -v
 ```
 
-## 2. Frontend Validation
-- **React Query & Error Boundaries**: Components are wrapped in error boundaries and utilize TanStack React Query's built-in retry logic.
+## 2. Frontend Testing (Vitest & React Testing Library)
+We utilize `vitest` alongside `@testing-library/react` to ensure the UI behaves predictably.
+- **Component Rendering**: Tests validate that core routing and ViewSwitcher logic successfully mount the correct `FanView` or `OpsDashboard` components.
+- **Provider Wrapping**: Tests ensure that the `QueryClientProvider` and contexts are correctly injected into the component tree.
 - **Type Checking**: Strict TypeScript configurations ensure compile-time safety and eliminate runtime `TypeError`s.
+
+*To run tests:*
+```bash
+cd frontend
+npm run test
+```
 
 ## 3. Accessibility Testing (A11y)
 The application has been audited for inclusive design:

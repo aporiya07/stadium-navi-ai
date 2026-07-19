@@ -38,7 +38,7 @@ export function ViewSwitcher() {
                 className="w-8 h-8 rounded-lg flex items-center justify-center"
                 style={{ backgroundColor: 'var(--c-accent)', boxShadow: '0 0 12px rgba(0,212,255,0.4)' }}
               >
-                <svg className="w-4 h-4" style={{ color: '#0D1117' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg aria-hidden="true" className="w-4 h-4" style={{ color: '#0D1117' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17.657 18.657A8 8 0 016.343 7.343M12 2a10 10 0 1010 10A10 10 0 0012 2z" />
                 </svg>
               </div>

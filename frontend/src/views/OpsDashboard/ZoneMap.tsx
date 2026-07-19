@@ -59,7 +59,7 @@ export function ZoneMap({ snapshot, onZoneClick }: ZoneMapProps) {
       <div className="p-4 border-b border-neutral-200">
         <div className="flex items-center justify-between">
           <h2 className="font-heading font-semibold text-neutral-900 flex items-center gap-2">
-            <svg className="w-5 h-5 text-fifa-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg aria-hidden="true" className="w-5 h-5 text-fifa-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
             </svg>
             Stadium Live Map
@@ -84,7 +84,7 @@ export function ZoneMap({ snapshot, onZoneClick }: ZoneMapProps) {
       <div className="flex-1 overflow-auto bg-neutral-50 p-4 relative">
         <div className="relative" style={{ width: '600px', height: '550px', margin: '0 auto' }}>
           {/* Stadium outline */}
-          <svg className="absolute inset-0 w-full h-full" viewBox="0 0 600 550" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg aria-hidden="true" className="absolute inset-0 w-full h-full" viewBox="0 0 600 550" fill="none" xmlns="http://www.w3.org/2000/svg">
             <ellipse cx="300" cy="275" rx="280" ry="250" fill="white" stroke="#E5E7EB" strokeWidth="2" />
             <ellipse cx="300" cy="275" rx="200" ry="180" fill="#F9FAFB" stroke="#E5E7EB" strokeWidth="1" />
             {/* Field */}

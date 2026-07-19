@@ -1,4 +1,8 @@
-// Type definitions for API responses
+/**
+ * Type definitions for Stadium Copilot API responses and payloads.
+ * Includes data models for AI chat, navigation, crowd tracking, and operational tasks.
+ */
+
 export interface Language {
   EN: 'en'
   ES: 'es'
@@ -16,6 +20,9 @@ export interface ChatRequest {
   context?: Record<string, any>
 }
 
+/**
+ * Expected response from the AI assistant chat endpoint.
+ */
 export interface ChatResponse {
   response: string
   language: LanguageCode
@@ -40,6 +47,9 @@ export interface Waypoint {
   landmarks?: string[]
 }
 
+/**
+ * Full navigational route spanning multiple waypoints, returning distance and time estimates.
+ */
 export interface NavigationResponse {
   waypoints: Waypoint[]
   total_distance_m: number

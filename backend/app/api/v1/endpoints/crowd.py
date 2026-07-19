@@ -1,3 +1,9 @@
+"""
+Crowd and AI Inference API Endpoints
+
+This module defines all endpoints related to the Stadium Copilot's crowd simulation
+and AI integration, including fan chat, accessible routing, crowd insights, and volunteer assignment.
+"""
 from fastapi import APIRouter, HTTPException, WebSocket, WebSocketDisconnect
 from typing import Dict, Any
 import asyncio

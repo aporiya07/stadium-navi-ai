@@ -21,6 +21,10 @@ async function fetcher<T>(endpoint: string, options?: RequestInit): Promise<T> {
 }
 
 // ==================== FAN ASSISTANT ====================
+
+/**
+ * Mutation hook for interacting with the AI Fan Assistant endpoint.
+ */
 export function useFanChat() {
   return useMutation({
     mutationFn: async (request: {
@@ -86,6 +90,10 @@ export function useTransportOptions() {
 }
 
 // ==================== OPS DASHBOARD ====================
+
+/**
+ * Mutation hook to fetch contextual volunteer operational actions based on zone/phase.
+ */
 export function useVolunteerActions() {
   return useMutation({
     mutationFn: async (request: {
@@ -133,6 +141,10 @@ export function useSetPhase() {
 }
 
 // ==================== CROWD DATA ====================
+
+/**
+ * Polling query hook that fetches live occupancy telemetry from the crowd simulator.
+ */
 export function useCrowdSnapshot() {
   return useQuery({
     queryKey: ['crowd', 'snapshot'],
