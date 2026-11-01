@@ -63,7 +63,7 @@ function Toast({ toast, onDismiss }: { toast: Toast; onDismiss: (id: string) => 
     >
       <div className="p-4 flex gap-3">
         <div className="flex-shrink-0 mt-0.5">
-          {icons[toast.type]}
+          {icons[toast.type]}<span className="sr-only">{toast.type}: </span>
         </div>
         <div className="flex-1 min-w-0">
           <p className="font-medium text-neutral-900 text-sm">{toast.title}</p>
