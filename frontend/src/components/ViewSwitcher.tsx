@@ -71,7 +71,7 @@ export function ViewSwitcher() {
                   key={id}
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.97 }}
-                  onClick={() => toggleView(id)}
+                  onClick={() => toggleView(id)} aria-label={label} aria-pressed={mode === id}
                   className="flex items-center gap-2 px-4 py-1.5 rounded-md text-sm font-medium transition-all duration-200"
                   style={mode === id ? {
                     backgroundColor: 'var(--c-accent-dim)',
@@ -82,7 +82,7 @@ export function ViewSwitcher() {
                     border: '1px solid transparent',
                   }}
                 >
-                  <span>{icon}</span>
+                  <span aria-hidden="true">{icon}</span>
                   <span className="hidden sm:inline">{label}</span>
                 </motion.button>
               ))}
