@@ -44,3 +44,6 @@ cd frontend
 npm install
 npm run dev
 ```
+## What I'd improve with more time
+
+This was built for a hackathon, so some parts were kept deliberately simple. With more time I would replace the simulated crowd data with real sensor or ticketing feeds, generalize the stadium layout beyond Levi's Stadium, add authentication and rate limiting to the API and WebSocket, and add frontend linting plus broader integration tests.
